@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 Color backgroundColor = Colors.white;
 Color textColor = Colors.black;
 Color backgroundGrey = const Color.fromRGBO(232, 233, 243, 1);
+Color backgroundCamera = const Color.fromRGBO(42, 60, 68, 1);
 
 //Font
 String fontSF = 'SF Pro Text';
