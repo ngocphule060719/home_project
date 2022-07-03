@@ -7,6 +7,7 @@ import 'package:home_project/widgets/drop_down_custom.dart';
 import 'package:home_project/widgets/text_field_custom.dart';
 import 'package:home_project/data/data.dart';
 
+import '../../widgets/reorderable_list_view_custom.dart';
 import 'add_picture.dart';
 
 class UserRegistrationScreen extends StatelessWidget {
@@ -97,10 +98,19 @@ class UserRegistrationScreen extends StatelessWidget {
               width: sWidth,
               height: sWidth * 48,
             ),
-            profileText(tWidth: sWidth, text: 'よく出かける沿線'), //Along the line that I often go out
+            profileText(tWidth: sWidth, text: 'よく出かける沿線'),
             SizedBox(
               width: sWidth,
-              height: sWidth * 24,
+              height: sWidth * 8,
+            ),
+            ReorderableListViewCustom(
+              data: ['大阪メトロ御堂筋線','tokyo','kyoto'],
+              rWidth: sWidth,
+              imageName: 'assets/images/osaka_metro.png',
+            ),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 16,
             ),
             ButtonIconCustom(
               bWidth: sWidth * 170,
@@ -117,6 +127,10 @@ class UserRegistrationScreen extends StatelessWidget {
               height: sWidth * 40,
             ),
             profileText(tWidth: sWidth, text: 'よく出かけるエリア'),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 8,
+            ),
             SizedBox(
               width: sWidth,
               height: sWidth * 24,
@@ -138,6 +152,10 @@ class UserRegistrationScreen extends StatelessWidget {
             profileText(tWidth: sWidth, text: 'お気に入りの店舗'),
             SizedBox(
               width: sWidth,
+              height: sWidth * 8,
+            ),
+            SizedBox(
+              width: sWidth,
               height: sWidth * 24,
             ),
             ButtonIconCustom(
@@ -155,6 +173,10 @@ class UserRegistrationScreen extends StatelessWidget {
               height: sWidth * 40,
             ),
             profileText(tWidth: sWidth, text: '働いている店舗'),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 8,
+            ),
             SizedBox(
               width: sWidth,
               height: sWidth * 24,

@@ -113,3 +113,11 @@ TextStyle textCheckBoxStyle = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 14,
 );
+
+TextStyle reorderableTextStyle = TextStyle(
+  decoration: TextDecoration.none,
+  color: textColor,
+  fontFamily: fontNoto,
+  fontWeight: FontWeight.w400,
+  fontSize: 16,
+);
