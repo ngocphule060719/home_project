@@ -12,15 +12,15 @@ class Avatar extends StatelessWidget {
   Widget build(BuildContext context) {
     const double popupRadius = 16;
     return SizedBox(
-      width: aWidth,
-      height: aWidth,
+      width: aWidth * 160,
+      height: aWidth * 160,
       child: Stack(
         children: <Widget>[
           // avatar picture
           Container(
             alignment: Alignment.center,
-            width: aWidth,
-            height: aWidth,
+            width: aWidth * 160,
+            height: aWidth * 160,
             decoration: BoxDecoration(
               color: backgroundGrey,
               shape: BoxShape.circle,
@@ -28,8 +28,8 @@ class Avatar extends StatelessWidget {
             child: Align(
               alignment: Alignment.center,
               child: SizedBox(
-                width: aWidth * 48 / 160,
-                height: aWidth * 48 / 160,
+                width: aWidth * 48,
+                height: aWidth * 48,
                 child: Image.asset('assets/images/person.png'),
               ),
             ),
@@ -40,8 +40,8 @@ class Avatar extends StatelessWidget {
             child: GestureDetector(
               // camera icon
               child: Container(
-                width: aWidth * 48 / 160,
-                height: aWidth * 48 / 160,
+                width: aWidth * 48,
+                height: aWidth * 48,
                 decoration: BoxDecoration(
                   color: backgroundCamera,
                   shape: BoxShape.circle,
@@ -54,8 +54,8 @@ class Avatar extends StatelessWidget {
                     context: context,
                     builder: (BuildContext context) {
                       return Container(
-                        width: aWidth * 375 / 160,
-                        height: aWidth * 261 / 160,
+                        width: aWidth * 375,
+                        height: aWidth * 261,
                         decoration: BoxDecoration(
                           color: backgroundColor,
                           borderRadius: const BorderRadius.only(
@@ -68,18 +68,18 @@ class Avatar extends StatelessWidget {
                           children: <Widget>[
                             SizedBox(
                               width: aWidth,
-                              height: aWidth * 24 / 160,
+                              height: aWidth * 24,
                             ),
                             textInPopUp(),
                             SizedBox(
                               width: aWidth,
-                              height: aWidth * 24 / 160,
+                              height: aWidth * 24,
                             ),
                             ButtonCustom(
-                              bHeight: aWidth * 46 / 160,
-                              bWidth: aWidth * 343 / 160,
+                              bHeight: aWidth * 46,
+                              bWidth: aWidth * 343,
                               onTap: () {
-                                // take a picture
+
                               },
                               bTitle: 'ライブラリから選ぶ',
                               bColor: appColor,
@@ -87,13 +87,13 @@ class Avatar extends StatelessWidget {
                             ),
                             SizedBox(
                               width: aWidth,
-                              height: aWidth * 16 / 160,
+                              height: aWidth * 16,
                             ),
                             ButtonCustom(
-                              bHeight: aWidth * 46 / 160,
-                              bWidth: aWidth * 343 / 160,
+                              bHeight: aWidth * 46,
+                              bWidth: aWidth * 343,
                               onTap: () {
-                                //choose from gallery
+
                               },
                               bTitle: '写真を撮る',
                               bColor: appColor,

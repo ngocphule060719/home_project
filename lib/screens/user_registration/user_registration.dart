@@ -47,7 +47,7 @@ class UserRegistrationScreen extends StatelessWidget {
               height: sWidth * 24,
             ),
             Center(
-              child: Avatar(aWidth: sWidth * 160),
+              child: Avatar(aWidth: sWidth),
             ),
             SizedBox(
               width: sWidth,
