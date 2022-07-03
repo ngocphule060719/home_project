@@ -56,6 +56,14 @@ TextStyle buttonTextStyle = TextStyle(
   fontFamily: fontSF,
 );
 
+TextStyle buttonTextAppColorStyle = TextStyle(
+  decoration: TextDecoration.none,
+  color: appColor,
+  fontSize: 17,
+  fontWeight: FontWeight.w600,
+  fontFamily: fontSF,
+);
+
 TextStyle profileTextStyle = TextStyle(
   decoration: TextDecoration.none,
   color: textColor,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:home_project/screens/user_registration/user_registration.dart';
+import 'package:home_project/screens/start.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserRegistrationScreen(),
+      home: StartMain(),
     );
   }
 }

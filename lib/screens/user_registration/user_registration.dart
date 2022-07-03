@@ -10,6 +10,16 @@ import 'package:home_project/data/data.dart';
 import '../../widgets/reorderable_list_view_custom.dart';
 import 'add_picture.dart';
 
+class UserRegister extends StatelessWidget {
+  const UserRegister({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+
 class UserRegistrationScreen extends StatelessWidget {
   late String appBarTitle = 'ユーザー登録';
 
@@ -104,7 +114,7 @@ class UserRegistrationScreen extends StatelessWidget {
               height: sWidth * 8,
             ),
             ReorderableListViewCustom(
-              data: ['大阪メトロ御堂筋線','tokyo','kyoto'],
+              data: line,
               rWidth: sWidth,
               imageName: 'assets/images/osaka_metro.png',
             ),
