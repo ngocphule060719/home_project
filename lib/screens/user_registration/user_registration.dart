@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home_project/constant/constant.dart';
 import 'package:home_project/screens/user_registration/avatar.dart';
+import 'package:home_project/screens/user_registration/checkbox_button.dart';
+import 'package:home_project/widgets/button_icon_custom.dart';
 import 'package:home_project/widgets/drop_down_custom.dart';
 import 'package:home_project/widgets/text_field_custom.dart';
 import 'package:home_project/data/data.dart';
@@ -55,7 +57,7 @@ class UserRegistrationScreen extends StatelessWidget {
               width: sWidth,
               height: sWidth * 32,
             ),
-            profileText(tWidth: sWidth),
+            profileText(tWidth: sWidth, text: 'プロフィール'),
             SizedBox(
               width: sWidth,
               height: sWidth * 16,
@@ -91,14 +93,99 @@ class UserRegistrationScreen extends StatelessWidget {
               height: sWidth * 8,
             ),
             textUnderIntroduction(tWidth: sWidth),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 48,
+            ),
+            profileText(tWidth: sWidth, text: 'よく出かける沿線'), //Along the line that I often go out
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 24,
+            ),
+            ButtonIconCustom(
+              bWidth: sWidth * 170,
+              bHeight: sWidth * 40,
+              text: '沿線を追加する',
+              icon: Icons.add,
+              bFunction: () {},
+              bColor: backgroundColor,
+              bTextStyle: buttonBGTextStyle,
+              borderColor: appColor,
+            ),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 40,
+            ),
+            profileText(tWidth: sWidth, text: 'よく出かけるエリア'),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 24,
+            ),
+            ButtonIconCustom(
+              bWidth: sWidth * 170,
+              bHeight: sWidth * 40,
+              text: 'エリアを追加する',
+              icon: Icons.add,
+              bFunction: () {},
+              bColor: backgroundColor,
+              bTextStyle: buttonBGTextStyle,
+              borderColor: appColor,
+            ),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 40,
+            ),
+            profileText(tWidth: sWidth, text: 'お気に入りの店舗'),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 24,
+            ),
+            ButtonIconCustom(
+              bWidth: sWidth * 170,
+              bHeight: sWidth * 40,
+              text: '店舗を追加する',
+              icon: Icons.add,
+              bFunction: () {},
+              bColor: backgroundColor,
+              bTextStyle: buttonBGTextStyle,
+              borderColor: appColor,
+            ),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 40,
+            ),
+            profileText(tWidth: sWidth, text: '働いている店舗'),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 24,
+            ),
+            ButtonIconCustom(
+              bWidth: sWidth * 170,
+              bHeight: sWidth * 40,
+              text: '店舗を追加する',
+              icon: Icons.add,
+              bFunction: () {},
+              bColor: backgroundColor,
+              bTextStyle: buttonBGTextStyle,
+              borderColor: appColor,
+            ),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 55,
+            ),
+            termText(tWidth: sWidth),
+            SizedBox(
+              width: sWidth,
+              height: sWidth * 13,
+            ),
+            CheckBoxAndButton(cWidth: sWidth),
           ],
         ),
       ),
     );
   }
 
-  Widget profileText({required double tWidth}) {
-    String text = 'プロフィール';
+  Widget profileText({required double tWidth, required String text}) {
     return Container(
       width: tWidth * 375,
       height: tWidth * 18,
@@ -200,6 +287,16 @@ class UserRegistrationScreen extends StatelessWidget {
     );
   }
 
+  Widget termText ({required double tWidth}){
+    String text = '以下利用規約を確認の上入力内容を登録してください。';
+    return Center(
+      child: Text(
+        text,
+        style: termTextStyle,
+      ),
+    );
+  }
+
   Widget textUnderIntroduction({required double tWidth}) {
     String line1 = '以下に該当するような自己紹介文は避けましょう';
     String line21 = '・個人情報を判断できるもの';
@@ -243,7 +340,7 @@ class UserRegistrationScreen extends StatelessWidget {
             height: tWidth * 14.8,
             width: tWidth * 327,
             child: Stack(
-              children: <Widget> [
+              children: <Widget>[
                 Positioned(
                   left: 0,
                   child: Text(

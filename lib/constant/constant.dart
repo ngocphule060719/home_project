@@ -9,6 +9,7 @@ Color backgroundCamera = const Color.fromRGBO(42, 60, 68, 1);
 Color appColor = const Color.fromRGBO(29, 32, 136, 1);
 Color labelTextFieldColor = const Color.fromRGBO(0, 0, 0, 0.6);
 Color hintTextFieldColor = const Color.fromRGBO(0, 0, 0, 0.12);
+Color termTextColor = const Color.fromRGBO(95, 108, 114, 1);
 
 //Font
 String fontSF = 'SF Pro Text';
@@ -37,6 +38,14 @@ TextStyle popUpTextStyle = TextStyle(
   fontSize: 14,
   fontWeight: FontWeight.w400,
   fontFamily: fontNoto,
+);
+
+TextStyle buttonBGTextStyle = TextStyle(
+  decoration: TextDecoration.none,
+  color: appColor,
+  fontSize: 15,
+  fontWeight: FontWeight.w600,
+  fontFamily: fontSF,
 );
 
 TextStyle buttonTextStyle = TextStyle(
@@ -87,4 +96,20 @@ TextStyle textFieldStyle = TextStyle(
   fontWeight: FontWeight.w500,
   fontFamily: fontNoto,
   height: 1.5,
+);
+
+TextStyle termTextStyle = TextStyle(
+  decoration: TextDecoration.none,
+  color: termTextColor,
+  fontSize: 12,
+  fontWeight: FontWeight.w400,
+  fontFamily: fontNoto
+);
+
+TextStyle textCheckBoxStyle = TextStyle(
+  decoration: TextDecoration.none,
+  color: appColor,
+  fontFamily: fontNoto,
+  fontWeight: FontWeight.w700,
+  fontSize: 14,
 );
